@@ -8,6 +8,7 @@ class QuestionsController < ApplicationController
   end
 
   def new
+    @questions = Question.new
   end
 
   def edit
