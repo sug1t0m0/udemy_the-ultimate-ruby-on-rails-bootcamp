@@ -16,7 +16,9 @@
           <th><%= question.title%></th>
           <th>[
             <%= link_to 'Edit', edit_question_path(question) %>
-            ] [Delete]</th>
+            ] [
+            <%= link_to 'Delete', question_path(question), method: :delete, data: {confirm: 'Are you sure?'} %>
+            ]</th>
         </tr>
       <% end %>
       </tbody>
