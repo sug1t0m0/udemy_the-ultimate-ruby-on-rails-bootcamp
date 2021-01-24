@@ -14,10 +14,15 @@
         <tr>
           <th><%= question.id%></th>
           <th><%= question.title%></th>
-          <th>[Edit] [Delete]</th>
+          <th>[
+            <%= link_to 'Edit', edit_question_path(question) %>
+            ] [Delete]</th>
         </tr>
       <% end %>
       </tbody>
     </table>
+    <div>
+      <%= link_to 'New question', new_question_path %>
+    </div>
   </div>
 </dev>
